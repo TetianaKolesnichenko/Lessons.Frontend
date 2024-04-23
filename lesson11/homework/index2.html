@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавление карточек</title>
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+            width: 300px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="addCardButton">Добавить карточку</button>
+
+    <div id="cardsContainer"></div>
+
+    <script>
+        // Функция для добавления карточки на страницу
+        function addCard() {
+            // Создаем элементы для карточки
+            const cardDiv = document.createElement("div");
+            cardDiv.classList.add("card");
+            
+            const title = document.createElement("h3");
+            title.textContent = "Заголовок карточки";
+            
+            const text = document.createElement("p");
+            text.textContent = "Текст карточки";
+            
+            const image = document.createElement("img");
+            image.src = "https://via.placeholder.com/300"; // URL изображения
+            
+            // Добавляем элементы карточки в основной div
+            cardDiv.appendChild(title);
+            cardDiv.appendChild(text);
+            cardDiv.appendChild(image);
+            
+            // Добавляем карточку на страницу
+            document.getElementById("cardsContainer").appendChild(cardDiv);
+        }
+
+        // Находим кнопку по id и добавляем обработчик события при клике
+        document.getElementById("addCardButton").addEventListener("click", addCard);
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Text Color</title>
+    <style>
+        #textDiv {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div id="textDiv">Текст, который нужно покрасить</div>
+    <button id="okButton">Ok</button>
+
+    <script>
+        // Находим элементы на странице
+        const textDiv = document.getElementById("textDiv");
+        const okButton = document.getElementById("okButton");
+
+        // Функция, которая меняет цвет текста в div на красный
+        function changeTextColor() {
+            textDiv.style.color = "red";
+        }
+
+        // Привязываем обработчик события к кнопке
+        okButton.addEventListener("click", changeTextColor);
+    </script>
+</body>
+</html>

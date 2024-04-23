@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+.container {
+    margin-top: 80px; /* учитываем высоту header */
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 400px;
+    height: 500px;
+    padding: 20px;
+    margin: 0 15px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.card:nth-child(1) {
+    border: 2px solid #007bff;
+}
+
+.card:nth-child(2) {
+    border: 2px solid #28a745;
+}
+
+.card:nth-child(3) {
+    border: 2px solid #dc3545;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+h2, p {
+    margin: 10px 0;
+}
